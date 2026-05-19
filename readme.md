@@ -1,67 +1,183 @@
-FirstRestAPI
+# FirstRestAPI
 
-This repository contains two tasks for learning backend development with Spring Boot.
+A RESTful API project built with Java and Spring Boot for learning backend development fundamentals and CRUD operations.
 
+---
 
-Task 1 – Basic Setup
+## Project Overview
 
-Initial setup of a Spring Boot project, including:
-- Project structure configuration
-- Dependency management with Maven
-- Running the application
-- Basic REST controller
+This repository contains two Spring Boot tasks created during backend development practice.
 
- Task 2 – Product REST API
+The project demonstrates:
 
-Implementation of a complete CRUD REST API for managing products.
+- REST API development
+- CRUD operations
+- Spring Boot architecture
+- DTO and Mapper usage
+- API documentation with Swagger
+- In-memory database integration using H2
 
- Technologies
+---
+
+## Technologies Used
+
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3-green)
+![Maven](https://img.shields.io/badge/Maven-Build-blue)
+![H2 Database](https://img.shields.io/badge/Database-H2-lightgrey)
+![Swagger](https://img.shields.io/badge/API-Swagger-brightgreen)
+
 - Java
 - Spring Boot
 - Maven
-- H2 Database (in-memory)
-- Swagger (OpenAPI)
+- H2 Database
+- Swagger / OpenAPI
+- REST API
 
+---
 
-Features
+## Project Structure
 
- Create Product
-POST /api/v1/products
+```bash
+src
+ ┣ main
+ ┃ ┣ java
+ ┃ ┃ ┗ com.example.firstrestapi
+ ┃ ┃    ┣ controller
+ ┃ ┃    ┣ service
+ ┃ ┃    ┣ repository
+ ┃ ┃    ┣ mapper
+ ┃ ┃    ┣ dto
+ ┃ ┃    ┗ entity
+ ┃ ┗ resources
+ ┗ test
+```
 
-Get All Products
-GET /api/v1/products
+---
 
- Get Product by ID
-GET /api/v1/products/{id}
+## Features
 
- Update Product
-PUT /api/v1/products/{id}
+- Create Product
+- Get All Products
+- Get Product By ID
+- Update Product
+- Delete Product
+- Swagger API Documentation
+- DTO Mapping
+- H2 In-Memory Database
 
- Delete Product
-DELETE /api/v1/products/{id}
+---
 
+## REST API Endpoints
 
-API Testing
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/v1/products` | Create product |
+| GET | `/api/v1/products` | Get all products |
+| GET | `/api/v1/products/{id}` | Get product by ID |
+| PUT | `/api/v1/products/{id}` | Update product |
+| DELETE | `/api/v1/products/{id}` | Delete product |
 
-Swagger UI available at:
+---
 
+## Example JSON Request
+
+```json
+{
+  "name": "Gaming Mouse",
+  "price": 120.0,
+  "quantity": 5
+}
+```
+
+---
+
+## Swagger Documentation
+
+After running the application, open:
+
+```bash
 http://localhost:8080/swagger-ui/index.html
+```
 
-How to Run
+Swagger provides interactive API testing directly from the browser.
 
-1. Open project in IntelliJ
-2. Run `FirstRestApiApplication`
-3. Open browser:
-   http://localhost:8080/swagger-ui/index.html
+---
 
-Project Structure
+## How to Run the Project
 
-- Controller → handles HTTP requests
-- Service → business logic
-- Repository → data storage (in-memory)
-- Mapper → converts between DTOs and entities
+### 1. Clone Repository
 
+```bash
+git clone https://github.com/krlamine/FirstRestAPI.git
+```
 
+---
 
- Author
-Student project for backend development course.
+### 2. Open Project
+
+Open the project using:
+
+- IntelliJ IDEA
+- VS Code
+- Eclipse
+
+---
+
+### 3. Run Application
+
+Run:
+
+```bash
+FirstRestApiApplication
+```
+
+---
+
+### 4. Open Swagger UI
+
+```bash
+http://localhost:8080/swagger-ui/index.html
+```
+
+---
+
+## What I Learned
+
+This project helped me improve my skills in:
+
+- Backend development
+- Spring Boot fundamentals
+- RESTful API architecture
+- CRUD operations
+- DTO and entity mapping
+- API testing
+- Clean project organization
+
+---
+
+## Future Improvements
+
+- Add MySQL or PostgreSQL
+- Add authentication with Spring Security
+- Add Docker support
+- Add unit and integration testing
+- Deploy API online
+- Add exception handling
+- Add pagination and filtering
+
+---
+
+## Author
+
+Mohamed Lamine Krina
+
+Cybersecurity & Computer Engineering Student at Vistula University
+
+GitHub: https://github.com/krlamine
+
+---
+
+## License
+
+This project is created for educational purposes.
